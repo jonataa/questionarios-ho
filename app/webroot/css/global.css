@@ -1,0 +1,18 @@
+/* 
+    Document   : global
+    Created on : 30/05/2012, 08:39:48
+    Author     : Jonata Weber
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.btnDefault { padding: 8px; }
+
+select { 
+    clear: both;
+    font-size: 100%;
+    font-family: "frutiger linotype", "lucida grande", "verdana", sans-serif;
+    padding: 1%;
+    width: 100%;
+}
+
