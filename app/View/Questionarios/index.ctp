@@ -16,37 +16,36 @@
     <table>
     <thead>
         <tr>
-        <th>Cód.</th>        
-        <th>Nome</th>
-        <th>E-mail</th>
-        <th style="text-align: center;">Data de Registro</th>
-        <th width="100px"></th>
+            <th>Cód.</th>        
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th style="text-align: center;">Data de Registro</th>
+            <th width="100px"></th>
         </tr>
     </thead>
     <tbody>
         <?php if(empty($questionarios)): ?>
         <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>            
         </tr>  
         <?php endif; ?>  
         <?php foreach($questionarios AS $questionario): ?>
         <tr>
-        <td><?php echo $questionario['Questionario']['id']; ?></td>        
-        <td><?php echo $questionario['Questionario']['nome']; ?></td>
-        <td><?php echo $questionario['Questionario']['email']; ?></td>
-        <td style="text-align: center;"><?php echo $questionario['Questionario']['registration']; ?></td>
-        <td style="text-align: center;">
-            <?php echo $this->Html->link(
-                    $this->Html->image('icon_details.png'), 
-                    array('action' => 'detalhe', $questionario['Questionario']['id']), 
-                    array('escape'=>false)); 
-                ?>
-        </td>
+            <td><?php echo $questionario['Questionario']['id']; ?></td>        
+            <td><?php echo $questionario['Questionario']['nome']; ?></td>
+            <td><?php echo $questionario['Questionario']['email']; ?></td>
+            <td style="text-align: center;"><?php echo $questionario['Questionario']['registration']; ?></td>
+            <td style="text-align: center;">
+                <?php echo $this->Html->link(
+                        $this->Html->image('icon_details.png'), 
+                        array('action' => 'detalhe', $questionario['Questionario']['id']), 
+                        array('escape'=>false)); 
+                    ?>
+            </td>
         </tr>
         <?php endforeach; ?>             
     </tbody>
